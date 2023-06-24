@@ -1,0 +1,66 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* .marquee {
+  display: flex;
+  width: 100%;
+  white-space: nowrap;
+  position: relative;
+  --offset: 20vw;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(-50% + var(--offset));
+   width: fit-content; 
+   overflow: hidden;
+  transform: translate3d(var(--move-initial), 0, 0);
+  animation: marquee 35s linear infinite;
+  animation-play-state: running;
+  border: 1px solid #dbdbdb;
+  padding-bottom:10px ;
+  padding-top:10px ;  
+
+}
+
+
+
+
+@keyframes marquee {
+  0% {
+      transform: translate3d(var(--move-initial), 0, 0);
+  }
+
+ 100% {
+      transform: translate3d(var(--move-final), 0, 0);
+  }
+} 
+
+ */
+
+
+ @keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee {
+  overflow: hidden;
+  animation: marquee 10s linear infinite;
+}
